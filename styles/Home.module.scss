@@ -1,0 +1,30 @@
+$primary-light: #efebe3;
+$primary-detail: #98981e;
+$primary-dark: #4d2c06;
+
+@mixin flex-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  width: 100vw;
+  height: 90vh;
+  @include flex-style;
+  flex-direction: row;
+  padding: 0 2rem;
+
+  .hero {
+    width: 50%;
+    height: 100%;
+    padding-left: 15rem;
+    @include flex-style;
+  }
+
+  .img {
+    width: 50%;
+    height: 100%;
+  }
+}

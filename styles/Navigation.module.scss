@@ -1,0 +1,31 @@
+$primary-light: #efebe3;
+$primary-detail: #98981e;
+$primary-dark: #4d2c06;
+
+@mixin flex-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  height: 10vh;
+  padding-top: 2rem;
+  @include flex-style;
+
+  ul {
+    width: 60%;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    @include flex-style;
+    flex-direction: row;
+    justify-content: space-around;
+
+    li {
+      font-weight: 700;
+      color: $primary-dark;
+    }
+  }
+}

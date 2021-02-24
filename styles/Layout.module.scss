@@ -1,0 +1,12 @@
+$primary-light: #efebe3;
+$primary-detail: #98981e;
+$primary-dark: #4d2c06;
+
+.container {
+  min-height: 100vh;
+  min-width: 100vw;
+  border: 2rem solid $primary-detail;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
