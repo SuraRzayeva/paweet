@@ -12,7 +12,7 @@ $primary-orange: #ec7e00;
 
 .container {
   width: 100%;
-
+  z-index: 3;
   .mainLine {
     h1 {
       font-size: 14rem;
@@ -36,20 +36,34 @@ $primary-orange: #ec7e00;
     height: 2px;
     width: 30rem;
     background: $primary-orange;
-    margin-top: 2rem;
   }
 
   .cta {
     button {
-      width: 18rem;
-      height: 5rem;
+      width: 20rem;
+      height: 4rem;
       border-radius: 3px;
       padding: 1rem;
+      margin: 2rem 0;
       background: $primary-orange;
       border-style: none;
       font-size: 1.2rem;
       color: $primary-light;
       font-weight: 700;
+      cursor: pointer;
+      transition: 0.1s ease-in all;
+    }
+    button:focus,
+    button:active {
+      outline: none;
+    }
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 2px 6px #98981e86;
+      background-color: $primary-detail;
+    }
+    button:active {
+      transform: scale(0.99);
     }
   }
 }
