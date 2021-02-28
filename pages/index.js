@@ -4,6 +4,7 @@ import Hero from '../components/TheHero'
 import { useContext } from 'react'
 import appContext from '../context/appContext'
 import ACTIONS from '../context/actions'
+import TheForm from '../components/TheForm'
 
 export default function Home() {
   const { state, dispatch } = useContext(appContext)
@@ -14,10 +15,8 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.hero}>
-        <Hero />
-      </div>
-      <div className={styles.img}>{!state.formActive && <h1>what</h1>}</div>
+      <div className={styles.hero}>{!state.formActive ? <Hero /> : <TheForm />}</div>
+      <div className={styles.img}></div>
       <div className={styles.backgroundTexts}>
         <h1 className={styles.line1}>ADOPT.</h1>
         <h1 className={styles.line2}>ADOPT.</h1>
